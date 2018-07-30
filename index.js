@@ -6,26 +6,27 @@
 
 import {
   NativeModules,
-  NativeEventEmitter
+  NativeEventEmitter,
  } from 'react-native';
 
 const { PPKReactBridge } = NativeModules;
+const p2pkitCallbackEmitter = new NativeEventEmitter(PPKReactBridge);
 
 export default class P2PKit {
 
 	static LOW_POWER = 'LOW_POWER';
 	static HIGH_PERFORMANCE = 'HIGH_PERFORMANCE';
 	static p2pkitCallbackHandler_;
-	static p2pkitCallbackEmitter = new NativeEventEmitter(PPKReactBridge);
+	
 
-	static subscription = P2PKit.p2pkitCallbackEmitter.addListener(
+	static subscription = p2pkitCallbackEmitter.addListener(
 		'callback',
-    	(nativeCallback) => {
-      		if(P2PKit.p2pkitCallbackHandler_[nativeCallback.methodName]) {
-        		P2PKit.p2pkitCallbackHandler_[nativeCallback.methodName](nativeCallback.parms);
-      		}
-    	}
-  	)
+		(nativeCallback) => {
+			if(P2PKit.p2pkitCallbackHandler_[nativeCallback.methodName]) {
+				P2PKit.p2pkitCallbackHandler_[nativeCallback.methodName](nativeCallback.parms);
+			}
+		}
+	) 
 
   	static enable(appkey, p2pkitCallbackHandler){
 
@@ -42,12 +43,12 @@ export default class P2PKit {
       	PPKReactBridge.disable();
     }
 
-	static getMyPeerId(myPeerId){
+	static getMyPeerId(){
       	PPKReactBridge.getMyPeerId();
     }
 
 	static startDiscovery(discoveryInfo, discoveryPowerMode){
-      	PPKReactBridge.startDiscovery(discoveryInfo, discoveryPowerMode);
+      	PPKReactBridge.startDiscovery(discoveryInfo, {discoveryPowerMode: discoveryPowerMode});
     }
 
 	static stopDiscovery(){

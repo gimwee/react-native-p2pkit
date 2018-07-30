@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/gim.wee/Documents/WINK/app/node_modules/react-native-p2pkit/android/src/main/assets"/><source path="/Users/gim.wee/Documents/WINK/app/node_modules/react-native-p2pkit/android/build/generated/assets/shaders/release"/></dataSet><dataSet config="release"><source path="/Users/gim.wee/Documents/WINK/app/node_modules/react-native-p2pkit/android/src/release/assets"/></dataSet></merger>

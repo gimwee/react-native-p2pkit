@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/gim.wee/Documents/WINK/app/node_modules/react-native-p2pkit/android/build/intermediates/res/merged/release/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/gim.wee/Documents/WINK/app/node_modules/react-native-p2pkit/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/Users/gim.wee/Documents/WINK/app/node_modules/react-native-p2pkit/android/build/intermediates/res/merged/release/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/gim.wee/Documents/WINK/app/node_modules/react-native-p2pkit/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    }
+]

@@ -1,0 +1,2 @@
+int raw license_attribution 0x7f020000
+int raw terms_of_service_and_license_agreement 0x7f020001
